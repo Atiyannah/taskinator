@@ -6,6 +6,7 @@ var tasksToDoEl = document.querySelector("#tasks-to-do");
 var createTaskHandler = function(event) {
     // prevents the browser from carrying out its default (unwanted) behavior
     event.preventDefault();
+    
     // create task item
     var listItemEl = document.createElement("li");
     // assign text a class and style it
@@ -14,7 +15,6 @@ var createTaskHandler = function(event) {
     listItemEl.textContent = "This is a new task.";
     // append the element to the task list
     tasksToDoEl.appendChild(listItemEl);
-    console.log(event);
 };
 
 formEl.addEventListener("submit", createTaskHandler);
